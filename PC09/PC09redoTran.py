@@ -19,7 +19,7 @@ feel- hurts eyes tho so be careful - music stops when screen fills blue again.
 import pygame
 #import numpy as np
 from random import *
-pygame.init()
+pygame.init() #initializes everything 
 
 #global
 size = (500,500) #screensize
@@ -27,7 +27,7 @@ screen = pygame.display.set_mode(size) #sets screen size
 clock= pygame.time.Clock() #tracks time
 run = True
 
-r1 = 15
+r1 = 15 #circ radius
 r2 = 15
 r3 = 15
 r4 = 15
@@ -35,11 +35,11 @@ r5 = 15
 NavyBlue = (0,0,128) #speaker color
 
 
-screen.fill(NavyBlue)
+screen.fill(NavyBlue) #create background
 
 #add music
 pygame.mixer.music.load('FunkyToons.wav') #plays funky toons from zapsplat.com
-pygame.mixer.music.play(2)
+pygame.mixer.music.play(2) #loop musica 2x
 
 
 def drawCircle(r,x,y):
@@ -97,7 +97,7 @@ while run:
          drawCircle(r5,250,250) #circle 5
          r5+=1
     
-    drawCircle5(r5,250,250)
+    drawCircle5(r5,250,250) #dis the blue dot
     
     
     clock.tick(14) #speed
